@@ -1,0 +1,41 @@
+:root {
+    --primary-background-color: #fbf4f4;
+    --primary-text: #501e1f;
+    --secondary-text: #B93238;
+
+}
+    @font-face {
+    font-family: Rache;
+    src: url(fonts/RacheRache.ttf);
+}
+
+@font-face {
+    font-family: Playfair;
+    src: url(fonts/PlayfairDisplay.ttf);
+}
+
+h1 span, h2 {
+    font-family: Rache;
+    line-height: 140%;
+    color: var(--secondary-text);
+}
+
+h2 {
+    font-family: Rache;
+    line-height: 140%;
+    color: var(--secondary-text);
+}
+
+p {
+    color: var(--primary-text);
+}
+
+* {
+    font-family: Playfair;
+    color: var(--primary-text);
+}
+
+body {
+    background-color: var(--primary-background-color);
+}
+

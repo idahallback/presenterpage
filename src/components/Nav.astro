@@ -1,0 +1,53 @@
+---
+
+---
+
+<div
+  x-data="{ showmenu: false }"
+  class="bg-[#fbf4f4] border-b border-[#2d1112] p-4 fixed w-full"
+  style="z-index: 3;"
+>
+  <div id="navbar" class="flex lg:text-2xl flex-row justify-between">
+    <div id="logo" class="uppercase ">
+      <a href="#" class="text-xl">Ida Hallbæck</a>
+    </div>
+    <nav id="desktopmenu" class="hidden lg:block">
+      <ul class="pt-1 flex flex-row gap-8">
+        <li class="lg:text-lg"><a href="#">Passion</a></li>
+        <li class="lg:text-lg"><a href="#">About me</a></li>
+        <li class="lg:text-lg"><a href="#">Contact</a></li>
+        <li class="lg:text-lg">
+          <a href="https://www.linkedin.com/in/idahallbaeck/">LinkedIn</a>
+        </li>
+      </ul>
+    </nav>
+    <button
+      id="burgermenu"
+      class="lg:hidden uppercase pt-1"
+      x-on:click="showmenu = ! showmenu">Menu</button
+    >
+  </div>
+  <nav
+    id="mobilmenu"
+    class="flex flex-col content-center pt-4"
+    x-show="showmenu"
+    x-transition
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
+    <ul>
+      <li class="text-center py-2">
+        <a href="#">Passion</a>
+      </li>
+      <li class="text-center py-2">
+        <a href="#">About me</a>
+      </li>
+      <li class="text-center py-2">
+        <a href="#">Contact</a>
+      </li>
+      <li class="text-center py-2">
+        <a href="https://www.linkedin.com/in/idahallbaeck/">LinkedIn</a>
+      </li>
+    </ul>
+  </nav>
+</div>

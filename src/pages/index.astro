@@ -1,9 +1,149 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
+import { Image } from "astro:assets";
+import Ida1 from "../assets/images/portrait_1.png";
+import Ida2 from "../assets/images/portrait_2.png";
+import Eye1 from "../assets/images/facepuzzle/eye_1.png";
+import Eye2 from "../assets/images/facepuzzle/eye_2.png";
+import Mouth1 from "../assets/images/facepuzzle/mouth_1.png";
+import Mouth2 from "../assets/images/facepuzzle/mouth_2.png";
 ---
-<MainLayout title="Titel">
-	<article>
-		<p>Index indhold</p>
-	</article>
-</MainLayout>
+
+<body>
+  <MainLayout title="IDA HALLBÆCK | Presentation">
+    <div class="max-w-screen-xl mx-auto px-2">
+      <section id="Hero">
+        <div class="p-4 sm:col-span-2"></div>
+        <div>
+          <h1 class="p-4 mt-10 lg:text-center lg:text-8xl text-7xl">
+            <span>Creative.</span>
+            <br />
+            <span class="lg:ml-40 ml-16">Inventive.</span>
+            <br />
+            <span class="lg:ml-80 ml-28">Reflective.</span>
+          </h1>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 p-4">
+          <p class="">
+            Welcome to my visual journey, where a discerning eye for aesthetics
+            converges with a dedication to process and thoughtfulness. <br />
+            <br /> I thrive on challenges, immersing myself in the exploration of
+            diverse visual components and interactive methods to sculpt engaging
+            user experiences.
+          </p>
+
+          <div x-data="{ animate: false }" class="grid grid-cols-2 gap-4">
+            <Image src={Eye1} alt="Facepuzzle" class="w-3/4 slide-in_up" style="z-index: 2;"/>
+            <Image src={Eye2} alt="Facepuzzle" class="w-3/4 slide-in_right" />
+            <Image src={Mouth1} alt="Facepuzzle" class="w-3/4 slide-in_down" style="z-index: 1;"/>
+            <Image src={Mouth2} alt="Facepuzzle" class="w-3/4 slide-in_left"/>
+          </div>
+        </div>
+      </section>
+
+      <section id="About" class="grid grid-cols-1 md:grid-cols-2 gap-5 p-4">
+        <div class="flex flex-col justify-center
+       col-span-1 sm:order-1">
+          <div>
+            <h2 class="text-3xl pt-5 lg:text-5xl lg:text-left">About me</h2>
+            <p class="py-4">
+              I am a dedicated design enthusiast and multimedia design student
+              in my third semester at the Copenhagen School of Design and
+              Technology (KEA), specializing in digital design. <br /><br />
+
+              I am passionate about exploring various visual components and
+              interactive methods to shape user experiences in the digital
+              realm. My creativity is the driving force behind finding
+              innovative solutions to any challenges. I am proactive, creative,
+              and a strong team player, capable of fostering synergy across
+              media platforms, as well as focusing on a single discipline when
+              necessary. <br /><br />
+
+              With experience and proficiency in software such as Figma, Adobe
+              InDesign, Photoshop, Illustrator, Premiere Pro, Adobe XD, and
+              various web technologies and frameworks like HTML5, CSS, Tailwind,
+              Astro, Alpine, and JavaScript, I thrive on continuously evolving
+              within digital design, user interfaces, and concept development. <br
+              /><br />
+
+              I am motivated by being part of a strong team where both
+              independent work and teamwork are valued. My goal is always to
+              actively participate in a community where we inspire eachother and
+              achieve the best results together. Being part of a team where we
+              support each other and contribute to each other's development
+              holds significant importance to me.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-center col-span-1 sm:order-2 pb-16"
+        >
+          <div id="Portrait">
+            <Image src={Ida2} alt="Portrait of Ida" class="" />
+          </div>
+        </div>
+      </section>
+    </div>
+  </MainLayout>
+</body>
+
+<style>
+  .slide-in_left {
+    animation: slideInLeft 3s infinite alternate;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in_right {
+    animation: slideInRight 3s infinite alternate;
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in_up {
+    animation: slideInUp 4.6s infinite alternate;
+  }
+
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in_down {
+    animation: slideInDown 4s infinite alternate;
+  }
+
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
