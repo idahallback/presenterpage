@@ -1,24 +1,31 @@
 ---
 import { Image } from "astro:assets";
-import signature from "../assets/images/signature.png";
+import Signature from "../assets/images/signature.png";
 ---
 
 <div>
-  <footer class="bg-white mt-20">
+  <footer class="mt-20 border-t border-[#501e1f]">
     <div class="max-w-7xl mx-auto py-8">
       <div
         class="grid grid-cols-1 sm:grid-cols-3 justify-items-center pb-8 list-none"
       >
-        <li class="mb-4 sm:mb-0 hover:font-bold"><a href="#">E-mail</a></li>
-        <li class="mb-4 sm:mb-0 hover:font-bold">
-          <Image src={signature} alt="Portrait of Ida" class="w-20" />
+        <li class="mb-4 sm:mb-0 hover:text-[#B93238]">
+          <a href="https://dribbble.com/idahallback">Curriculum Vitae</a>
         </li>
-        <li class="mb-4 sm:mb-0 hover:font-bold">
-          <a href="#">LinkedIn</a>
+        <li class="mb-4 sm:mb-0 hover:text-[#B93238]">
+          <a href="mailto:idahallback@outlook.com">Happy to receive hello's!</a>
+        </li>
+        <li class="mb-4 sm:mb-0 hover:text-[#B93238]">
+          <a href="https://www.linkedin.com/in/idahallbaeck/" target="_blank">LinkedIn</a>
         </li>
       </div>
       <div class="flex justify-center">
-        <p>© <strong>Presentation</strong> Ida Hallbæck</p>
+        <span class="mr-4">©</span>
+        <div class="flex justify-center">
+          <a href="#">
+            <Image src={Signature} alt="Portrait of Ida" class="w-20" />
+          </a>
+        </div>
       </div>
     </div>
   </footer>

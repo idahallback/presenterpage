@@ -1,10 +1,15 @@
 :root {
     --primary-background-color: #fbf4f4;
+    --secondary-background-color: #fae68b;
+    --tertiary-background-color: #fff6b4; 
     --primary-text: #501e1f;
     --secondary-text: #B93238;
-
 }
-    @font-face {
+html {
+    scroll-behavior:smooth
+}
+
+@font-face {
     font-family: Rache;
     src: url(fonts/RacheRache.ttf);
 }
@@ -14,7 +19,7 @@
     src: url(fonts/PlayfairDisplay.ttf);
 }
 
-h1 span, h2 {
+h1 span, h2, h3 {
     font-family: Rache;
     line-height: 140%;
     color: var(--secondary-text);
@@ -26,8 +31,9 @@ h2 {
     color: var(--secondary-text);
 }
 
-p {
+p, li {
     color: var(--primary-text);
+    line-height: 180%;
 }
 
 * {
@@ -36,6 +42,6 @@ p {
 }
 
 body {
-    background-color: var(--primary-background-color);
+    background-color: var(--secondary-background-color);
 }
 
