@@ -41,6 +41,12 @@ p, li {
     color: var(--primary-text);
 }
 
+.custom-font {
+    font-family: Rache;
+    font-weight: bolder;
+    color: var(--secondary-text);
+}
+
 body {
     background-color: var(--secondary-background-color);
 }
