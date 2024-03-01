@@ -11,21 +11,15 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link 
-    rel="icon" 
-    type="n/ico" 
-    href="../public/favicon.ico">
+    <link rel="icon" type="icon" href="public/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content=""
-    />
+    <meta name="description" content="Meet Ida Hallbæck, a talented designer from Copenhagen School of Design and Technology. Explore her journey through the realms of digital media, art, and technology, as she showcases her creative flair and dedication to excellence. Dive into Ida's portfolio to witness her passion for pushing boundaries and crafting captivating visual experiences. Join her as she embarks on new opportunities and elevates the world of design." />
     <title>{Astro.props.title}</title>
   </head>
 
   <header>
-	<Header />
+    <Header />
   </header>
 
   <body class="mx-auto lg:px-36">
@@ -37,4 +31,5 @@ const { title } = Astro.props;
       <Footer />
     </footer>
   </body>
+
 </html>
