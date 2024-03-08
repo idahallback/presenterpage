@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets";
+import Eye1 from "../assets/images/facepuzzle/eye_1.png";
+import Eye2 from "../assets/images/facepuzzle/eye_2.png";
+import Mouth1 from "../assets/images/facepuzzle/mouth_1.png";
+import Mouth2 from "../assets/images/facepuzzle/mouth_2.png";
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:gap-20 p-5">
+  <div
+    class="flex items-center justify-center col-span-1 sm:order-2 pb-16 lg:pb-0"
+  >
+    <div x-data="{ animate: false }" class="grid grid-cols-2">
+      <Image
+        src={Eye1}
+        alt="Facepuzzle"
+        class="w-4/6 ml-10 slide-in_up"
+        style="z-index: 2;"
+      />
+      <Image src={Eye2} alt="Facepuzzle" class="w-4/6 mt-4 ml-5 slide-in_right" />
+
+      <Image
+        src={Mouth1}
+        alt="Facepuzzle"
+        class="w-4/6 ml-10 slide-in_down"
+        style="z-index: 1;"
+      />
+      <Image src={Mouth2} alt="Facepuzzle" class="w-4/6 mt-5 slide-in_left" />
+    </div>
+  </div>
+
+  <p class="text-xl leading-relaxed">
+    I am deeply fascinated by the intersection of digital media, visual
+    communication, interfaces, art, and technology and I embrace this holistic
+    approach in my design practice. <br /><br />
+    <span>
+      As a student in the third semester of multimedia design at Copenhagen
+      School of Design and Technology, I am currently seeking internship
+      opportunities to refine my skills and pursue growth. Seeking positions
+      starting August 2024.</span
+    >
+  </p>
+</div>
+
+<style>
+  .slide-in_left {
+    animation: slideInLeft 4s forwards;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(-25%);
+      z-index: 1;
+    }
+  }
+
+  .slide-in_right {
+    animation: slideInRight 4s forwards;
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-20%);
+      opacity: 1;
+    }
+  }
+
+  .slide-in_up {
+    animation: slideInUp 4s forwards;
+  }
+
+  @keyframes slideInUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in_down {
+    animation: slideInDown 4s forwards;
+  }
+
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>

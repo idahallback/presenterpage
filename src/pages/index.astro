@@ -1,227 +1,39 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Info from "../components/Info.astro";
-import { Image } from "astro:assets";
-import Ida2 from "../assets/images/Ida.png";
-import Eye1 from "../assets/images/facepuzzle/eye_1.png";
-import Eye2 from "../assets/images/facepuzzle/eye_2.png";
-import Mouth1 from "../assets/images/facepuzzle/mouth_1.png";
-import Mouth2 from "../assets/images/facepuzzle/mouth_2.png";
+import Heading from "../components/Heading.astro";
+import Hero from "../components/Hero.astro";
+import Personally from "../components/Personally.astro";
+import WhyMe from "../components/Whyme.astro";
+import Skillset from "../components/Skillset.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <body>
   <MainLayout title="Ida Hallbæck | Presentation">
     <div class="max-w-screen-xl mx-auto px-2 sm:px-4">
-      <section id="Hero">
-        <div class="p-4 sm:col-span-2"></div>
-        <div>
-          <h1 class="p-4 mt-10 lg:text-center lg:text-8xl text-5xl">
-            <span class="h1_1 opacity-0">Innovative.</span>
-            <br />
-            <span class="h1_2 opacity-0 lg:ml-40 ml-20">Creative.</span>
-            <br />
-            <span class="h1_3 opacity-0 lg:ml-80 ml-44">Reflective.</span>
-          </h1>
-        </div>
+      <section id="heading">
+        <Heading />
       </section>
 
-      <section id="Introduction">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-20 p-5">
-          <div
-            class="flex items-center justify-center col-span-1 sm:order-2 pb-16"
-          >
-            <div x-data="{ animate: false }" class="grid grid-cols-2">
-              <Image
-                src={Eye1}
-                alt="Facepuzzle"
-                class="w-4/6 ml-5 slide-in_up"
-                style="z-index: 2;"
-              />
-              <Image src={Eye2} alt="Facepuzzle" class="w-4/6 slide-in_right" />
-
-              <Image
-                src={Mouth1}
-                alt="Facepuzzle"
-                class="w-4/6 ml-8 slide-in_down"
-                style="z-index: 1;"
-              />
-              <Image
-                src={Mouth2}
-                alt="Facepuzzle"
-                class="w-4/6 mt-5 slide-in_left"
-              />
-            </div>
-          </div>
-
-          <p class="text-xl leading-relaxed">
-            Welcome to my professional profile, where I offer insight into my
-            identity as a designer and the motivations behind my work. <br /><br
-            />I am deeply fascinated by the intersection of digital media,
-            visual communication, art, and technology, and I embrace this
-            holistic approach in my design practice. <br /><br />
-            <span>
-              As a student in the third semester of multimedia design at
-              Copenhagen School of Design and Technology, I am currently seeking
-              internship opportunities to refine my skills and pursue growth.</span
-            >
-          </p>
-        </div>
+      <section id="hero">
+        <Hero />
       </section>
 
-      <section id="Abilities">
-        <p class="text-[#fae68b]"><br /><br /><br /></p>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-10 px-5">
-          <div class="flex items-center justify-center col-span-1 sm:order-2">
-          </div>
-          <h3 class="text-4xl lg:text-5xl lg:text-right py-5 lg:py-0">
-            What makes me stand out?
-          </h3>
-          <p class="text-xl leading-relaxed mb-10">
-            I thrive on tackling challenges, especially within the realms of
-            digital design, user interfaces, and concept development. Leveraging
-            my proficiency in tools such as Figma and Illustrator, I
-            continuously refine my skills and consistently deliver high quality
-            results.
-            <br /><br />
-            Whether the task is managing projects, conducting research, prototyping,
-            or conducting compelling visual narratives, my approach remains simple,
-            structured, and focused on the user experience and the visual appeal.
-          </p>
-        </div>
+      <section id="why" class="py-10">
+        <WhyMe />
       </section>
 
-      <h3 class="text-4xl lg:text-5xl text-center pb-10 p-5">Skillset</h3>
-      <Info />
-
-      <section id="Details">
-        <p class="text-[#fae68b]"><br /><br /><br /></p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 px-5">
-          <div class="col-span-1">
-            <h3 class="text-4xl lg:text-5xl pb-3">Person</h3>
-            <div class="mr-10 text-lg pb-6">
-              <p>
-                My creativity drives me to find innovative solutions to
-                challenges. I am proactive, creative, and a strong team player
-                capable of creating synergy across media platforms. <br /><br />
-                I appreciate art, music, poetry, cooking, and all sensory experiences.
-                I find great inspiration in nature and the people around me. I consider
-                myself an empathetic, resourceful individual with a committed work
-                ethic and a great sense of humor.
-              </p>
-            </div>
-          </div>
-
-          <div class="hidden sm:block">
-            <Image src={Ida2} alt="Portrait" class="pb-8" />
-          </div>
-
-          <div class="col-span-1 md:ml-20">
-            <h3 class="text-4xl lg:text-5xl pb-3">Details</h3>
-            <ul class="list-none text-lg">
-              <li><strong>Name:</strong> Ida Lærke Hallbæck-Andersen</li>
-              <li><strong>Date of birth:</strong> November 14th, 1995</li>
-              <li><strong>Location:</strong> Copenhagen, Denmark</li>
-              <li><strong>Programme:</strong> APD in Multi Media Design</li>
-              <li>
-                <strong>Institution:</strong> KEA – Copenhagen School of Design and
-                Technology
-              </li>
-            </ul>
-            <br /><br />
-            <h3 class="text-4xl lg:text-5xl pb-3">Work</h3>
-            <ul class="list-none text-lg">
-              <li class="hover:text-[#B93238]">
-                <a
-                  href="http://idahallback.dk/portfoliosite"
-                  target="_blank"
-                  class="font-bold">1st Semester Portfolio</a
-                >
-              </li>
-              <li class="hover:text-[#B93238] pb-8">
-                <a href="#" target="_blank" class="font-bold"
-                  >2nd Semester Portfolio</a
-                > (TBA)
-              </li>
-            </ul>
-            <div class="sm:hidden">
-              <Image src={Ida2} alt="Portrait" />
-            </div>
-          </div>
-        </div>
+      <section id="aboutme" class="py-10">
+        <Personally />
       </section>
 
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const spans = document.querySelectorAll(".opacity-0");
-          let delay = 0;
+      <section id="skills" class="py-10">
+        <Skillset />
+      </section>
 
-          spans.forEach((span) => {
-            setTimeout(() => {
-              span.classList.remove("opacity-0");
-              span.classList.add("opacity-100");
-            }, delay);
-            delay += 500;
-          });
-        });
-      </script>
-
-      <style>
-        .slide-in_left {
-          animation: slideInLeft 4s infinite alternate;
-        }
-
-        @keyframes slideInLeft {
-          from {
-            transform: translateX(-100%);
-          }
-          to {
-            transform: translateX(-20%);
-            opacity: 1;
-          }
-        }
-
-        .slide-in_right {
-          animation: slideInRight 4s infinite alternate;
-        }
-
-        @keyframes slideInRight {
-          from {
-            transform: translateX(100%);
-          }
-          to {
-            transform: translateX(-20%);
-            opacity: 1;
-          }
-        }
-
-        .slide-in_up {
-          animation: slideInUp 4s infinite alternate;
-        }
-
-        @keyframes slideInUp {
-          from {
-            transform: translateY(100%);
-          }
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-
-        .slide-in_down {
-          animation: slideInDown 4s infinite alternate;
-        }
-
-        @keyframes slideInDown {
-          from {
-            transform: translateY(-100%);
-          }
-          to {
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
-      </style>
+      <section id="projects" class="pt-10">
+        <Projects />
+      </section>
     </div>
   </MainLayout>
 </body>

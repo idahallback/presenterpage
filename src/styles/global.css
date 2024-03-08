@@ -5,8 +5,9 @@
     --primary-text: #501e1f;
     --secondary-text: #B93238;
 }
+
 html {
-    scroll-behavior:smooth
+    scroll-behavior:smooth;
 }
 
 @font-face {

@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import Ida2 from "../assets/images/Ida.jpg";
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 px-5 mt-14 lg:mt-24">
+  <div class="col-span-1">
+    <h3 class="text-4xl lg:text-5xl pb-3">About me</h3>
+    <div class="mr-10 text-lg pb-6">
+      <p>
+        My creativity drives me to find innovative solutions to challenges. I am
+        proactive, creative, and a strong team player capable of creating
+        synergy across media platforms. <br /><br />
+        I appreciate art, music, poetry, cooking, and engaging in all sensory experiences.
+        I find great inspiration in nature and the people around me. I consider myself
+        an empathetic, resourceful individual with a committed work ethic and a great
+        sense of humor.
+      </p>
+    </div>
+  </div>
+
+  <div class="hidden sm:block">
+    <Image src={Ida2} alt="Portrait" class="fade-in" />
+  </div>
+
+  <div class="col-span-1 md:ml-10">
+    <h3 class="text-4xl lg:text-5xl">Details</h3>
+    <ul class="list-none text-lg mb-6 leading-loose">
+      <li><strong>Name:</strong> Ida Lærke Hallbæck-Andersen</li>
+      <li><strong>Date of birth:</strong> November 14th, 1995</li>
+      <li><strong>Location:</strong> Copenhagen, Denmark</li>
+      <li><strong>Programme:</strong> APD in Multi Media Design</li>
+      <li>
+        <strong>Institution:</strong> KEA – Copenhagen School of Design and Technology
+      </li>
+    </ul>
+    <div class="sm:hidden">
+      <Image src={Ida2} alt="Portrait" class="fade-in" />
+    </div>
+  </div>
+</div>
+
+<style>
+  li {
+    line-height: 200%;
+  }
+</style>

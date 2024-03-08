@@ -4,7 +4,7 @@ import Signature from "../assets/images/signature.png";
 ---
 
 <div>
-  <footer class="mt-20 border-t border-[#501e1f] lg:text-lg">
+  <footer class="mt-20 border-t border-[#501e1f] text-md lg:text-lg">
     <div class="max-w-7xl mx-auto py-8">
       <div
         class="grid grid-cols-1 sm:grid-cols-3 justify-items-center pb-8 list-none"
@@ -26,7 +26,7 @@ import Signature from "../assets/images/signature.png";
         <span class="mr-4">©</span>
         <div class="flex justify-center">
           <a href="#">
-            <Image src={Signature} alt="Portrait of Ida" class="w-20" />
+            <Image src={Signature} alt="Portrait of Ida" class="w-28" />
           </a>
         </div>
       </div>
@@ -35,8 +35,8 @@ import Signature from "../assets/images/signature.png";
 </div>
 
 <script>
-  const cvButton = document.getElementById('cv-button');
-cvButton.addEventListener('click', function() {
-  window.open('CV.pdf', '_blank');
-});
+  const cvButton = document.getElementById("cv-button");
+  cvButton.addEventListener("click", function () {
+    window.open("CV.pdf", "_blank");
+  });
 </script>
