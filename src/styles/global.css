@@ -1,7 +1,5 @@
 :root {
-    --primary-background-color: #fbf4f4;
-    --secondary-background-color: #fae68b;
-    --tertiary-background-color: #fff6b4; 
+    --primary-background-color: #ffdf99;
     --primary-text: #501e1f;
     --secondary-text: #B93238;
 }
@@ -49,6 +47,6 @@ p, li {
 }
 
 body {
-    background-color: var(--secondary-background-color);
+    background-color: var(--primary-background-color);
 }
 
