@@ -1,81 +1,33 @@
-<div
-  x-data="{ showmenu: false }"
-  class="bg-[#ffdf99] border-b border-[#2d1112] p-4 fixed w-full"
-  style="z-index: 3;"
->
-  <div id="navbar" class="flex lg:text-2xl flex-row justify-between">
-    <div id="logo">
-      <a href="#" class="text-2xl uppercase hover:text-[#B93238]">Ida Hallbæck</a>
+<div x-data="{ showMenu: false }" class=" p-8 fixed w-full z-30 bg-[#FAF0E6]">
+  <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <div class="logo-text text-2xl font-bold text-[#B93238]"><a href="#">IDA HALLBÆCK</a></div>
     </div>
-    <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-8 mt-1">
-        <li class="lg:text-xl hover:text-[#B93238]">
-          <a href="#heading">Welcome</a>
-        </li>
-        <li class="lg:text-xl hover:text-[#B93238]">
-          <a href="#why">Why me?</a>
-        </li>
-        <li class="lg:text-xl hover:text-[#B93238]">
-          <a href="#aboutme">About me</a>
-        </li>
-        <li class="lg:text-xl hover:text-[#B93238]">
-          <a href="#skills">Skills</a>
-        </li>
-        <li class="lg:text-xl hover:text-[#B93238]">
-          <a href="#projects">Projects</a>
-        </li>
+    
+    <!-- Desktop Menu -->
+    <nav class="hidden lg:block">
+      <ul class="flex gap-8 text-lg">
+        <li class="hover:text-[#B93238]"><a href="#heading">Welcome</a></li>
+        <li class="hover:text-[#B93238]"><a href="#why">Why me?</a></li>
+        <li class="hover:text-[#B93238]"><a href="#aboutme">About me</a></li>
+        <li class="hover:text-[#B93238]"><a href="#skills">Skills</a></li>
+        <li class="hover:text-[#B93238]"><a href="#projects">Projects</a></li>
       </ul>
     </nav>
-    <button
-      id="burgermenu"
-      class="lg:hidden text-xl mt-1 uppercase hover:text-[#B93238]"
-      x-on:click="showmenu = !showmenu">Menu</button
-    >
+    
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden text-lg hover:text-[#B93238]" x-on:click="showMenu = !showMenu">Menu</button>
   </div>
-  <nav
-    id="mobilmenu"
-    class="flex flex-col content-center pt-4"
-    x-show="showmenu"
-    x-transition:enter="transition-opacity ease-in-out duration-500"
-    x-transition:enter-start="opacity-0"
-    x-transition:enter-end="opacity-100"
-    x-transition:leave="transition-opacity ease-in-out duration-500"
-    x-transition:leave-start="opacity-100"
-    x-transition:leave-end="opacity-0"
-    x-on:click="showmenu = false"
-    x-on:click.outside="showmenu = false"
-  >
-    <ul>
-      <li
-        class="text-center text-xl py-2 pt-1 hover:text-[#B93238]"
-        x-transition:enter-delay="200"
-      >
-        <a href="#heading">Welcome</a>
-      </li>
-      <li
-        class="text-center text-xl py-2 pt-1 hover:text-[#B93238]"
-        x-transition:enter-delay="300"
-      >
-        <a href="#why">Why me?</a>
-      </li>
-      <li
-        class="text-center text-xl py-2 pt-1 hover:text-[#B93238]"
-        x-transition:enter-delay="400"
-      >
-        <a href="#aboutme">About me</a>
-      </li>
-      <li
-        class="text-center text-xl py-2 pt-1 hover:text-[#B93238]"
-        x-transition:enter-delay="400"
-      >
-        <a href="#skills">Skills</a>
-      </li>
-      <li
-        class="text-center text-xl py-2 pt-1 hover:text-[#B93238]"
-        x-transition:enter-delay="200"
-      >
-        <a href="#projects">Projects</a>
-      </li>
+  
+  <!-- Mobile Menu -->
+  <nav x-show="showMenu" class="lg:hidden mt-4 bg-[#FAF0E6] p-4" x-transition>
+    <ul class="flex flex-col items-center text-lg gap-3">
+      <li class="hover:text-[#B93238]"><a href="#heading">Welcome</a></li>
+      <li class="hover:text-[#B93238]"><a href="#why">Why me?</a></li>
+      <li class="hover:text-[#B93238]"><a href="#aboutme">About me</a></li>
+      <li class="hover:text-[#B93238]"><a href="#skills">Skills</a></li>
+      <li class="hover:text-[#B93238]"><a href="#projects">Projects</a></li>
     </ul>
   </nav>
 </div>
