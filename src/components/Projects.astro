@@ -1,5 +1,7 @@
 ---
 import { Image } from "astro:assets";
+import DHV from "../assets/images/portfolio/dhv.png";
+import CPHLAB from "../assets/images/portfolio/cphlab.png";
 import Nicolai from "../assets/images/portfolio/nicolailorenzen.png";
 import Azad from "../assets/images/portfolio/azad.png";
 import CA from "../assets/images/portfolio/ca.png";
@@ -10,10 +12,43 @@ import Konrad from "../assets/images/portfolio/KonradVSKragerne.png";
 import Exam from "../assets/images/portfolio/exam.png";
 ---
 
+
 <div class="p-5 mt-5 lg:mt-10">
-  <h1 class="text-[#B93238] text-5xl lg:text-6xl pb-8 lg:pb-10">Work</h1>
+  <h1 class="text-[#B93238] text-5xl lg:text-6xl pb-8 lg:pb-10">Cases</h1>
   <section>
+
+
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-20">
+
+      <div class="col-span-1 zoom">
+        <div class="overflow-hidden">
+          <a href="https://danskhv.netlify.app/" target="_blank">
+            <Image src={DHV} alt="Dansk Hestevæddeløb" />
+          </a>
+        </div>
+        <a href="https://danskhv.netlify.app/" target="_blank">
+          <h2 class="text-2xl mt-2 py-3">Dansk Hestevæddeløb</h2>
+        </a>
+        <figcaption class="prose text-lg text-[#501e1f]">
+          For our final project in the Multimedia Design program, my project partner and I conceptualized and produced a digital scrollytelling experience focused on Danish horse racing, highlighting its rich heritage. Our goal was to bring the history and essence of the sport to life in a fresh and engaging way, specifically targeting a younger audience. The project was well received, earning us the highest grade along with honors for our creativity, execution, and innovative approach.
+        </figcaption>
+      </div>
+
+      <div class="col-span-1 zoom">
+        <div class="overflow-hidden">
+          <a href="https://cph-lab.netlify.app/" target="_blank">
+            <Image src={CPHLAB} alt="CPH-Lab" />
+          </a>
+        </div>
+        <a href="https://cph-lab.netlify.app/" target="_blank">
+          <h2 class="text-2xl mt-2 py-3">CPH-LAB</h2>
+        </a>
+        <figcaption class="prose text-lg text-[#501e1f]">
+          My study group and I redesigned the Copenhagen-based analog company CPH-Lab's website to enhance its digital identity and optimize the purchasing experience. Through a scrollytelling approach, we narrated the story of analog photography, creating an engaging journey for users. By combining a streamlined design with the one-thing-per-page strategy, we made the purchasing process more intuitive while preserving CPH-Lab’s visual identity and passion for analog film.
+        </figcaption>
+      </div>
+
+
       <div class="col-span-1 zoom">
         <div class="overflow-hidden">
           <a href="https://nicolailorenzen.netlify.app/" target="_blank">
@@ -139,7 +174,7 @@ import Exam from "../assets/images/portfolio/exam.png";
           For the first semester exam, I was tasked with developing a portfolio
           site showcasing my work from the first semester. I planned the
           process, carefully integrating the tools and themes explored
-          throughout the semester to craft a polished digital product. <br /> The
+          throughout the semester to craft a polished digital product. The
           feedback I received from my teachers was exceptionally positive.
         </figcaption>
       </div>

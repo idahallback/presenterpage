@@ -18,6 +18,11 @@ html {
     src: url(fonts/PlayfairDisplay.ttf);
 }
 
+@font-face {
+    font-family: Avenir;
+    src: url(fonts/Avenir.otf);
+}
+
 h1 span, h2, h3 {
     font-family: Rache;
     line-height: 140%;
@@ -36,7 +41,7 @@ p, li {
 }
 
 * {
-    font-family: Playfair;
+    font-family: Avenir;
     color: var(--primary-text);
 }
 
